@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+}
+.tool-bar{
+  margin : 15px;
+}
+.side-bar-styles{
+  height: inherit;
+  width:350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(36, 78, 244, 0.766);
+}
+.actions{
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  align-items: stretch;
+  gap:7rem;
+}
