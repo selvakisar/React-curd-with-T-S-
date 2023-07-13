@@ -1,5 +1,7 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useState,} from "react";
+import TopBar from "./Components/TopBar";
+import Base from "./BasePage/Base";
 import Dashboard from "./Pages/Dashboard";
 import Profile from "./Pages/Profile";
 import StudentList from "./Components/StudentList";
@@ -28,7 +30,7 @@ function App() {
       qualification: "B.Sc(IT)",
     },
   ];
-  const [data1, setDataa] = useState( teacherData);
+  const [detail, setDetail] = useState( teacherData);
 
 
   const studentData = [
@@ -73,12 +75,12 @@ function App() {
 
         <Route
           path="/teacher/add"
-          element={<AddTeachers teacherData={data1} setData={setDataa} />}
+          element={<AddTeachers teacherData={detail} setData={setDetail} />}
         />
         
         <Route
-          path="/edit/teacher/:id"
-          element={<EditTeacher teacherData={data1} setData={setDataa} />}
+          path="/editteacher/:id"
+          element={<EditTeacher teacherData={detail} setData={setDetail} />}
         />
         
         <Route
@@ -88,7 +90,7 @@ function App() {
 
         <Route
           path="/teacher/all"
-          element={<TeacherList teacherData={data1} setData={setDataa} />}
+          element={<TeacherList teacherData={detail} setData={setDetail} />}
         />
       </Routes>
     </div>

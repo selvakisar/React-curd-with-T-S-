@@ -6,7 +6,7 @@ export default function EditTeacher({teacherData,setData}){
 const navigate=useNavigate()
 const {id}=useParams()
 
-    const [idy, setIdy] = useState("");
+    const [idx, setIdx] = useState("");
     const [name, setName] = useState("");
     const [sub, setSub] = useState("");
     const [email, setEmail] = useState("");
@@ -17,7 +17,7 @@ const {id}=useParams()
         console.log("id:",id)
         const selectedTeacher=teacherData.find((teac,index)=>teac.id===parseInt(id))
         console.log(selectedTeacher)
-        setIdy(selectedTeacher.id)
+        setIdx(selectedTeacher.id)
         setName(selectedTeacher.name)
         setSub(selectedTeacher.sub)
         setPhone(selectedTeacher.phone)
@@ -28,7 +28,7 @@ const {id}=useParams()
 
     function editTeacher(){
         const editedTeacherobject={
-            id:idy,
+            id:idx,
             name,sub,phone,qualification,email
         }
         console.log(editedTeacherobject)
@@ -49,7 +49,7 @@ const {id}=useParams()
                     placeholder="Enter Teacher ID"
                     className="input input-bordered input-md w-96" 
                     value={id}
-                    onChange={(e)=>setIdy(e.target.value)}
+                    onChange={(e)=>setIdx(e.target.value)}
                     />
             </label>
 

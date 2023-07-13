@@ -1,22 +1,21 @@
 import Base from "../BasePage/Base"
 import TeacherCard from "./TeacherCard"
 
-function TeacherList({teacherData, setDataa}){
+function TeacherList({teacherData, setData}){
     return (
        
       
        <Base>
 
              <h1>                                          
-                
-                
+        
                 
                                                        </h1>
             {teacherData.map((teac, idx)=>(
                 <TeacherCard
                teacher={teac}
                 teacherData ={teacherData}
-                setDataa={setDataa}
+                setData={setData}
                 key={teac.id}
                 />
             ))}

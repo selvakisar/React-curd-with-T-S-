@@ -55,7 +55,7 @@ export default function AddTeachers({teacherData, setData}) {
                      />
                 </label>
                 <label className="input-group input-group-md  m-2">
-                    <span>Batch</span>
+                    <span>Subject</span>
                     <input type="text"
                      placeholder="Enter Teacher Batch" 
                      className="input input-bordered input-md w-96" 
